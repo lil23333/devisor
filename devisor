@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>mrBin</title>
+<style>
+body {
+background-color : #5F9EA0;
+}
+div {
+border: 1px solid #333;
+box-shadow: 8px 5px 8px;
+heigth : 30px;
+width  : 50px;
+backgroung-color : #F7F8A0;
+}
+.color1 {
+background-color : #DC143C;
+}
+
+.hh {
+font-weigth : bold;
+font-size : 24 px;
+}
+
+.color2 {
+background-color : #2F4F4F;
+}
+.hidden {
+display : none;
+}
+
+table {
+border-collapse: collapse;
+border : 1 px solid grey;
+}
+
+td {
+padding: 10px 20px;
+border : 1px solid grey;
+background-color : #F0F8FF;
+}
+
+</style>
+
+</head>
+
+<body>
+<input>
+<p></p>
+
+<button>ckick me</button>
+<script>
+let inp = document.querySelector('input');
+let btn = document.querySelector('button');
+let p = document.querySelector('p');
+
+function primeFactors (n) {
+    let arr = [];
+    for (let devisor = 2; devisor <= 2; devisor++) {
+
+    while (n >=2 ) {
+    if (n % devisor == 0) {
+        arr.push(devisor);
+        n = n / devisor;
+    } else {
+        devisor++;
+    }}}
+    return arr;
+    }
+
+btn.addEventListener('click',()=> {
+    let number = inp.value;
+    let deviderArr = primeFactors (number);
+  
+    for (let i = 0; i < deviderArr.length;i++) {
+        let ul = document.createElement('ul');
+        ul.textContent = deviderArr[i];
+        p.appendChild(ul);
+    }});
+</script>
+</body>
+</html>
